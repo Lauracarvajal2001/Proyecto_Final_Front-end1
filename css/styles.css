@@ -1,0 +1,605 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap");
+/*body{display:none;} para probar que este funcionando la linkeada con el documento html*/
+
+/* Selector universal */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Con esta propiedad seteo que el padding sea teniendo en cuenta las medidas que le di */
+  /* Estas tres propiedades son fundamentales siempre */
+  list-style: none;
+  color: black;
+  text-align: none;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+/* a los contenedores ponerle max width de 1200 y y margin auto  */
+/* Asi me aparece el menu al lado del titulo*/
+.container_header {
+  padding: 10px 50px;
+  /*para volver el header responsive */
+  justify-content: space-around;
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 1350px;
+  margin: auto;
+  /* justify-content: space-between;  */
+}
+.nav_header {
+  display: flex;
+  align-items: center; /* en el eje vertical */
+  gap: 2em;
+}
+
+.ul_header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+.menu {
+  color: #242e52;
+  font-size: 13px;
+}
+
+.burguer {
+  display: none;
+}
+
+/* Terminamos de organizar el */
+.section_1 {
+  margin: auto;
+  max-width: 1200px;
+  height: 550px;
+  align-items: center;
+  padding: 10px 50px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.img_jugador {
+  width: 400px;
+  height: auto;
+  border-image: auto;
+}
+
+/* le estoy dando forma a la section1 segun como aparece en figma  para esto contamos con una imagen 
+y unos divs donde van textos*/
+
+.div_Sec1 {
+  display: flex;
+  background-color: #fff;
+  width: 600px;
+  height: 400px;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 28px;
+}
+
+.text_sec1 {
+  color: #232c50;
+  text-align: right;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 114.6%; /* 57.3px */
+  letter-spacing: -1.75px;
+}
+
+.p_sec1 {
+  color: #000;
+  text-align: right;
+  font-family: "Be Vietnam Pro";
+  font-style: normal;
+  font-weight: 500;
+  line-height: 157.1%; /* 26.013px */
+}
+
+.boton_header {
+  width: 144px;
+  height: 40px;
+  align-items: center;
+  background: #8b48bf;
+  border-radius: 1em; /* Para que sea redondeado */
+  border: none; /* Para que el boton no tenga borde */
+  padding: 0.5em 2em; /* Cuanto espacio entre el borde y la palabra */
+  margin: 1em;
+  color: white;
+  font-size: 1em; /* Agrandar la letra */
+}
+
+.boton {
+  width: 144px;
+  height: 40px;
+  align-items: center;
+  background: #8b48bf;
+  border-radius: 1em;
+  border: none;
+  padding: 0.5em 2em;
+  margin: 1em;
+  color: white;
+  font-size: 1em;
+}
+
+/* Despues de organizar los botones pasamos a la section 2 donde veremos 2 textos en distintos divs*/
+
+.section_2 {
+  display: flex;
+  max-width: 1200px;
+  margin: auto;
+  height: auto;
+  padding: 2% 5%;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  background: #8b48bf;
+}
+
+.p_sec2 {
+  color: #fff;
+  width: 500px;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 114.6%; /* 41.256px */
+}
+
+.p_sec2_2 {
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 151.1%; /* 24.176px */
+  width: 500px;
+}
+
+/* Finalizada la section 2, en la section 3 encontraremos cards que atraves de la propiedad row-wrap daran las posiciones deseadas*/
+.section_3 {
+  max-width: 1200px;
+  height: auto;
+  background-color: #f8f8fc;
+  margin: auto;
+}
+
+.contenedor3 {
+  display: flex;
+  max-width: 1200px;
+  height: 400px;
+  align-items: center;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin: auto;
+  padding: 20px;
+}
+
+.boton_sec3 {
+  width: 70px;
+  height: 40px;
+  align-items: center;
+  background: #8b48bf;
+  border-radius: 2em; /* Para que sea redondeado */
+  border: none; /* Para que el boton no tenga borde */
+  padding: 0.2em 0.5em; /* Cuanto espacio entre el borde y la palabra */
+  margin: 1em;
+  color: white;
+  font-size: 1em; /* Agrandar la letra */
+}
+
+.text_card {
+  width: 400px;
+  height: 200px;
+  gap: 2em;
+}
+
+.track {
+  color: #323851;
+  height: 70px;
+  padding: 25px 0px;
+  margin: 0%;
+}
+
+.card_container {
+  width: 500px;
+  height: 150px;
+  display: flex;
+}
+
+.card {
+  width: 400px;
+  height: auto;
+  color: #b3b2b7;
+}
+
+/* Ahora empezaremos la 4ta section que tambien tiene cards, la 2da card se menciona aparte ya que la necesitaremos para la version mobile*/
+
+.section_4 {
+  height: 750px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 50px;
+}
+
+.Best {
+  color: #242e53;
+  text-align: center;
+  justify-content: center;
+  font-size: 39.214px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 156.6%; /* 61.41px */
+  letter-spacing: -0.392px;
+  height: 150px;
+}
+
+.container_card {
+  background-color: #f8f8fc;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.avatar {
+  position: relative;
+  top: -30px;
+}
+
+.card4 {
+  width: 400px;
+  height: auto;
+  background-color: #f8f8fc;
+  display: flex;
+  padding-bottom: 25px;
+}
+
+.card4_2 {
+  width: 400px;
+  height: auto;
+  background-color: #f8f8fc;
+  display: flex;
+  padding-bottom: 25px;
+}
+
+.name {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+p {
+  text-align: center;
+  width: 380px;
+  color: #b3b2b7;
+}
+
+.name {
+  margin: auto;
+  color: #3f4868;
+  font-size: 16.071px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 156.6%; /* 25.168px */
+  letter-spacing: -0.161px;
+}
+
+.boton_m {
+  width: 134px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+  background: #8b48bf;
+  border-radius: 2em;
+  border: none;
+  padding: 0.5em 2em;
+  margin: 1em;
+  color: white;
+  font-size: 1em;
+}
+
+.div_boton {
+  height: 300px;
+  margin: auto;
+  padding: 30px;
+}
+
+.section_5 {
+  max-width: 1200px;
+  height: 225px;
+  background-color: #8b48bf;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.p_sec5 {
+  color: #fff;
+  font-family: Be Vietnam;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 119.6%; /* 47.84px */
+  letter-spacing: -0.2px;
+}
+
+.b5 {
+  width: 134px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border-radius: 1em;
+  border: none;
+  padding: 0.5em 2em;
+  color: #8b48bf;
+  font-size: 1em;
+}
+
+/* En la section 5 contamos con un texto en un div y un boton */
+
+footer {
+  max-width: 1200px;
+  margin: auto;
+  padding: 100px;
+  background-color: #1e1e26;
+}
+
+.Imagenes {
+  align-items: center;
+  display: flex;
+  gap: 80px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container_f {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav_footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  max-width: 350px;
+}
+
+.li_footer {
+  align-items: Right;
+  color: white;
+  padding: 10px;
+}
+
+.ul_footer {
+  flex-direction: column;
+}
+
+input {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 100px;
+  outline: none;
+  font-weight: bold;
+}
+
+.submit {
+  background-color: #8b48bf;
+  color: white;
+}
+
+.Copy {
+  width: 100%;
+  color: rgb(150, 150, 150);
+  text-align: right;
+}
+
+/* Se cierra el codigo para desktop y pasamos a mobile */
+
+/* ------------------------------------------------------------------------------------------------------ */
+@media (max-width: 600px) {
+  header {
+    padding: 10% 0%;
+    width: 480px;
+    height: 150px;
+    align-items: center;
+  }
+
+  .burguer {
+    display: block;
+  }
+
+  /* Queria hacer el menu funcional pero estuve super enferma esta semana y no alcance :( */
+  /* PD: Una de las secciones no quedo del todo bien, no me juzgues profe soy adulta pero chiquita AJJAJJA (Honestamente mi cerebro no dio en como hacerle) */
+
+  /* 
+.nav_header {
+
+    display: flex;
+    flex-direction: column;
+    align-items:end ;
+    position:absolute;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    background-color: #8b48bf;
+    padding: 2em;
+    gap: 1em;
+  }
+
+  .ul_header{
+    flex-direction: column;
+    align-items: end;
+    color: #242E52;
+  }
+
+  .menu{
+  color: #B9B9C1;
+  }
+ */
+
+  .nav_header {
+    display: none;
+  }
+
+  .boton_header {
+    display: none;
+    width: 480px;
+  }
+
+  .section_1 {
+    display: flex;
+    height: auto;
+    flex-flow: row wrap;
+    width: 480px;
+    gap: 40px;
+    padding-bottom: 30px;
+  }
+  .div_Sec1 {
+    width: 400px;
+    height: auto;
+    margin: 0px;
+    gap: 28px;
+  }
+
+  .section_2 {
+    background-color: #3cddf3;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    height: 350px;
+  }
+
+  .p_sec2 {
+    color: #fff;
+    width: 400px;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    text-align: left;
+    line-height: 114.6%; /* 41.256px */
+  }
+
+  .p_sec2_2 {
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 151.1%; /* 24.176px */
+    width: 400px;
+    text-align: left;
+  }
+
+  /* Finalizamos section 2 */
+  .section_3 {
+    width: 480px;
+    height: auto;
+    gap: 2em;
+  }
+
+  .contenedor3 {
+    height: auto;
+    gap: 1em;
+    padding: 40px;
+  }
+
+  .card_container {
+    width: 400px;
+    height: auto;
+  }
+
+  .card {
+    width: 300px;
+    height: auto;
+    padding: 15px 0px;
+  }
+
+  .track {
+    color: #090936;
+    height: 40px;
+    margin: 0%;
+    padding: 15px 0px;
+    background-color: #d2d2d8;
+  }
+
+  .boton_sec3 {
+    height: 40px;
+  }
+
+  /* Section 3 */
+
+  .card4 {
+    display: none;
+  }
+
+  .card4_2 {
+    width: 480px;
+    height: auto;
+    background-color: #f8f8fc;
+  }
+
+  .section_4 {
+    width: 480;
+    height: 600px;
+  }
+
+  .section_5 {
+    padding: 40px;
+    display: flex;
+    height: 500px;
+    flex-direction: column;
+    background-color: #3cddf3;
+  }
+  .p_sec5 {
+    padding: 30px;
+    color: #fff;
+    text-align: center;
+    font-size: 55px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 119.6%; /* 47.84px */
+    letter-spacing: -0.2px;
+  }
+  .b5 {
+    background-color: #232c50;
+    color: white;
+  }
+
+  .Imagenes {
+    flex-direction: column-reverse;
+    gap: 50px;
+  }
+
+  .container_f {
+    flex-direction: column-reverse;
+    gap: 50px;
+  }
+
+  footer img {
+    width: 150px;
+  }
+
+  footer .icons {
+    justify-content: space-around;
+    width: 100%;
+    display: flex;
+  }
+
+  footer .icons img {
+    width: 20px;
+  }
+
+  footer {
+    width: 480px;
+    margin: auto;
+    padding: 60px;
+  }
+
+  .Copy {
+    text-align: center;
+    padding-top: 50px;
+  }
+}
